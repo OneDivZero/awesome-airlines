@@ -41,7 +41,7 @@ class Playground
   def setup_fleet
     @fleet = Fleet.new(build_some_airplanes)
 
-    another_plane = PassengerLine.new
+    another_plane = PassengerLine.new('ABC-0129')
 
     @fleet.add(another_plane)
   end
@@ -51,12 +51,12 @@ class Playground
   # nor the object-type for an array (dynamic typing principle here)
   private def build_some_airplanes
     [
-      PassengerLine.new,
-      PassengerLine.new,
-      JumboJet.new,
-      JumboJet.new,
-      Privado.new,
-      Privado.new
+      PassengerLine.new('ABC-0123'),
+      PassengerLine.new('ABC-0124'),
+      JumboJet.new('ABC-0125'),
+      JumboJet.new('ABC-0126'),
+      Privado.new('ABC-0127'),
+      Privado.new('ABC-0128')
     ]
   end
 

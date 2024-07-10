@@ -12,7 +12,8 @@ class Airplane
 
   # Constructor in Ruby:
   # we are raising an exception here, cause we only want to allow instances from a concrete subclass!
-  def initialize
+  def initialize(identifier)
+    @identifier = identifier
     @flight_readiness = false
 
     if not_an_airplane_descendant?
