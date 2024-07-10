@@ -33,7 +33,7 @@ class Playground
   def initialize(_args = [])
     heading
     setup_fleet
-    @fleet.show
+    show_fleet
   end
 
   # setup a fleet using an array provided by :build_some_airplanes as return value
@@ -49,7 +49,7 @@ class Playground
   # build an array with airplanes of different types (implicit return in ruby!)
   # ... in Ruby you do not need to declare whether explicitly the array (syntactic sugar)
   # nor the object-type for an array (dynamic typing principle here)
-  def build_some_airplanes
+  private def build_some_airplanes
     [
       PassengerLine.new,
       PassengerLine.new,
@@ -58,6 +58,14 @@ class Playground
       Privado.new,
       Privado.new
     ]
+  end
+
+  private def show_fleet
+    spacer
+    puts 'This is our fleet:'
+    spacer
+    @fleet.show
+    spacer
   end
 
   # show an awesome header
@@ -69,7 +77,7 @@ class Playground
 
   # show company-name and a slogan
   private def slogan
-    "#{COMPANY} ... *Fly better*".colorize(:green)
+    "#{COMPANY} ... <FlyBetter> ...".colorize(:green)
   end
 
   # do 80 times printing '-' on console with the given color

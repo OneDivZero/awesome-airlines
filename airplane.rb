@@ -32,7 +32,7 @@ class Airplane
   end
 
   # evaluate if the current instance is not the base-class of any airplane-instance
-  def not_an_airplane_descendant?
+  private def not_an_airplane_descendant?
      not self.class.superclass.eql?(Airplane) # 'not' is the same as '!' in Java, both works ;-)
   end
 end
