@@ -4,5 +4,7 @@ class PassengerLine < Airplane
     @capacity = 240
     @cargo_load = 15
     @cruising_range = 2000
+
+    super
   end
 end

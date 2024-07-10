@@ -29,7 +29,7 @@ class Playground
     new
   end
 
-  # constructor in Ruby
+  # Constructor in Ruby: may take additional arguments from command-line
   def initialize(_args = [])
     heading
     setup_fleet

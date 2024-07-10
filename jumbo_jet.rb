@@ -4,5 +4,7 @@ class JumboJet < Airplane
     @capacity = 400
     @cargo_load = 35
     @cruising_range = 6000
+
+    super
   end
 end

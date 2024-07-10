@@ -4,5 +4,7 @@ class Privado < Airplane
     @capacity = 10
     @cargo_load = 2
     @cruising_range = 500
+
+    super
   end
 end
