@@ -33,6 +33,7 @@ class Playground
   def initialize(_args = [])
     heading
     setup_fleet
+    @fleet.show
   end
 
   # setup a fleet using an array provided by :build_some_airplanes as return value
@@ -68,7 +69,7 @@ class Playground
 
   # show company-name and a slogan
   private def slogan
-    "#{COMPANY} ... *Fly better*"
+    "#{COMPANY} ... *Fly better*".colorize(:green)
   end
 
   # do 80 times printing '-' on console with the given color

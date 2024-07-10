@@ -23,7 +23,12 @@ class Airplane
 
   # override :to_s provided by class Object
   def to_s
-    "#{self.class.name} #{@model} | capacity: #{@capacity} | cargo_load: #{@cargo_load} | cruising_range: #{@cruising_range}"
+    "#{self.class.name} #{@model} | ID: #{identifier} | capacity: #{@capacity} | cargo_load: #{@cargo_load} | cruising_range: #{@cruising_range}"
+  end
+
+  def state
+    puts self.to_s.colorize(:blue) # normally implicit call of :to_s, but :colorize needs it explicitly
+    puts "readiness: #{flight_readiness} | maintenance: #{performed_maintenance_count}".colorize(:yellow)
   end
 
   # evaluate if the current instance is not the base-class of any airplane-instance
