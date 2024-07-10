@@ -4,6 +4,8 @@
 
 # require usefull 3rd-party-libs aka gems
 require 'colorize'
+require 'pry'
+require 'pry-alias'
 
 # require our custom project-classes
 require_relative 'fleet'
